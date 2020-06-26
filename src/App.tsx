@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.scss';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import FooterElement  from './Core/Components/Footer/';
+import Header  from './Core/Components/Header/';
+import Footer  from './Core/Components/Footer/';
 
 class App extends Component<any, any> {
   public async componentDidMount(): Promise<void> {}
@@ -10,8 +11,9 @@ class App extends Component<any, any> {
   public render() {
     return (
       <div className="App">
-        
         <BrowserRouter>
+          <Header />
+          
           <Switch>
           {/* <Route
             path="/"
@@ -21,7 +23,7 @@ class App extends Component<any, any> {
           </Switch>
         </BrowserRouter>
 
-        <FooterElement />
+        <Footer />
       </div>
     );
   }
